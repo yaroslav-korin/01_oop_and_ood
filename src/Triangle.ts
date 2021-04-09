@@ -24,9 +24,9 @@ export class Triangle extends Shape {
             const vertexNumber = index + 1;
 
             if (index === arr.length - 1) {
-                return `${acc}v${vertexNumber}=(${point.x}, ${point.y})]`;
+                return `${acc}v${vertexNumber}=${point.toString()}]`;
             } else {
-                return `${acc}v${vertexNumber}=(${point.x}, ${point.y}),`;
+                return `${acc}v${vertexNumber}=${point.toString()},`;
             }
         }, '')}`
     }
