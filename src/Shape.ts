@@ -24,9 +24,9 @@ export abstract class Shape {
         return `A Shape with color of ${this.color} and ${this.filled ? 'filled' : 'not filled'}. ` +
             `Points: ${this.points.reduce((acc, point, index, arr) => {
                 if (index === arr.length - 1) {
-                    return `${acc}(${point.x}, ${point.y}).`;
+                    return `${acc}${point.toString()}.`;
                 } else {
-                    return `${acc}(${point.x}, ${point.y}), `;
+                    return `${acc}${point.toString()}, `;
                 }
             }, '')}`
     }

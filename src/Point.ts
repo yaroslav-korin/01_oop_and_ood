@@ -1,6 +1,6 @@
 export class Point {
-    public readonly x: number;
-    public readonly y: number;
+    private readonly x: number;
+    private readonly y: number;
 
     constructor();
     constructor(x: number, y: number);
