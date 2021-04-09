@@ -4,13 +4,13 @@ export abstract class Shape {
     protected readonly color: string;
     protected readonly filled: boolean;
 
-    protected readonly points: Point[]
+    protected readonly points: Point[];
 
-    constructor(points: Point[])
-    constructor(points: Point[], color: string, filled: boolean)
+    constructor(points: Point[]);
+    constructor(points: Point[], color: string, filled: boolean);
     constructor(points: Point[], color: string = 'green', filled: boolean = true) {
         if (!points || points.length < 3) {
-            throw Error('Should receives at least 3 points')
+            throw Error('Should receives at least 3 points');
         }
 
         this.points = points;
@@ -20,11 +20,11 @@ export abstract class Shape {
 
     abstract getType(): string;
 
-    public toString() {
+    public toString(): string {
         return `A Shape with color of ${this.color} and ${this.filled ? 'filled' : 'not filled'}. ` +
             `Points: ${this.points.reduce((acc, point, index, arr) => {
                 if (index === arr.length - 1) {
-                    return `${acc}(${point.x}, ${point.y}).`
+                    return `${acc}(${point.x}, ${point.y}).`;
                 } else {
                     return `${acc}(${point.x}, ${point.y}), `;
                 }
@@ -36,12 +36,12 @@ export abstract class Shape {
 
         this.points.forEach((point, index, arr) => {
             if (index === arr.length - 1) {
-                return perimeter += point.distance(arr[0])
+                return perimeter += point.distance(arr[0]);
             }
 
-            return perimeter += point.distance(arr[index + 1])
+            return perimeter += point.distance(arr[index + 1]);
         })
 
-        return perimeter
+        return perimeter;
     }
 }
