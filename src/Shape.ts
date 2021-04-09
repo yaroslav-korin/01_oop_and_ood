@@ -4,7 +4,7 @@ export abstract class Shape {
     protected readonly color: string;
     protected readonly filled: boolean;
 
-    private readonly points: Point[]
+    protected readonly points: Point[]
 
     constructor(points: Point[])
     constructor(points: Point[], color: string, filled: boolean)

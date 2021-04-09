@@ -4,14 +4,9 @@ export class Point {
 
     constructor()
     constructor(x: number, y: number)
-    constructor(x?: number, y?: number) {
-        if (x && y) {
+    constructor(x: number = 0, y: number = 0) {
             this.x = x;
             this.y = y;
-        } else {
-            this.x = 0;
-            this.y = 0
-        }
     }
 
     public distance()
