@@ -31,7 +31,7 @@ export abstract class Shape {
             }, '')}`
     }
 
-    public getPerimeter() {
+    public getPerimeter(): number {
         let perimeter: number = 0;
 
         this.points.forEach((point, index, arr) => {
